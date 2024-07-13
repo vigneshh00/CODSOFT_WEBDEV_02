@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --main-color:#25a5e4;
+    --text-color:#fff;
+    --other-color:#212121;
+    --second-color:#9e9e9e;
+    --bg-color:#111111;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:var(--bg-color)
+}
+
+/* HEADER SECTION */
+header{
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    margin-bottom: 100px;
+}
+.intro,.company-name{
+    position: relative;
+}
+.company-name h1{
+    font-size: 40px;
+    padding-left: 60px;
+}
+.company-name img{
+    position: absolute;
+    top: 0%;
+    left: 0;
+    height: 45px;
+    width: 60px;
+}
+.menu-bar a{
+    position: relative;
+    text-decoration: none;
+    color: var(--second-color);
+    margin: 15px;
+    font-size: 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: all 0.3s;
+}
+.menu-bar a::after{
+    display: block;
+    margin:auto;
+    margin-top: 10px;
+    content: "";
+    background-color: var(--text-color);
+    height: 2px;
+    width: 0%;
+    transition: all 0.3s;
+}
+.menu-bar a:hover{
+    color: var(--text-color);
+}
+.menu-bar a:hover::after{
+    width: 100%;
+}
+
+/* ABOUT */
+main #about{
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: 50px;
+    width: 80%;
+    padding:50px;
+    position: relative;
+    display: flex;
+}
+#about p:nth-child(1){
+    font-weight: 10;
+    color: var(--text-color);
+    max-width: 45%;
+    height: 200px;
+    font-size: 65px;    
+    letter-spacing: 0.1cm;
+    line-height: 2.5cm;
+}
+#about span{
+    font-family: "Source Code Pro", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: var(--main-color);
+    position: relative;
+    width: 100%;
+}
+#about span:nth-child(2){
+    font-size: 10px;
+    line-height: 0cm;
+}
+#about span::after{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-left:4px var(--main-color) solid;
+    animation: typing 3.5s steps(10) forwards;
+    overflow-y: hidden;
+}
+@keyframes typing {
+    100%{
+        left:100%;
+    }
+}
+#about img{
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    left: 690px;
+    top: 0;
+    transform: translateY(-100px);
+    filter: drop-shadow(0px 0px 5px #fff);
+}
+
+
+/* MISSION */
+main #mission{
+    margin: auto;
+    width: 100%;
+    padding: 100px 100px 120px 100px;
+    line-height: 1cm;
+    margin-top: 200px;
+}
+main #mission h2{
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 10;
+    color: rgb(84, 84, 84);
+    font-size: 50px;    
+    letter-spacing: 0.1cm;
+    background: -webkit-linear-gradient(#33ccff 0%, #cc33ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#mission div p{
+    color: var(--text-color);
+    font-size: 19px;
+    line-height: 1.1cm;
+    letter-spacing: 0.11ch;
+}
+#mission img{
+    width: 600px;
+    height: 400px;
+    float: left;
+    filter: drop-shadow(0px 0px 250px #4449dc);
+}
+
+/* BENEFITS */
+#benefits{
+    background: url(images/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    margin-top: 50px;
+    width: 100%;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 380px 380px 380px;
+    justify-content: space-around;
+}
+
+#benefits div{
+    color: var(--text-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 18px;
+    line-height: 1cm;
+    letter-spacing: 0.11ch;
+    padding: 35px;
+    height: 400px;
+    margin: auto;
+    border-top: 2px solid rgb(207, 17, 255);
+    border-left: 2px solid rgb(207, 17, 255);
+    box-shadow:4px 4px 1px rgb(17, 172, 255);
+    border-radius: 40px;
+    transition: 0.5s ease-in-out;
+}
+#benefits div:hover{
+    color: white;
+    transform: scale(1.06); 
+    background-color: var(--other-color);
+}
+#benefits #benefits-heading{
+    color: var(--text-color);
+    font-size: 40px;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center;
+    margin-bottom: 50px;
+}
+#benefits #benefits-heading span{
+    color: rgb(32, 114, 228);
+}
+#benefits div h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+#benefits div p{
+    font-size: 22px;
+    
+}
+
+/* COURSES */
+#courses{
+    margin-top: 50px;
+    width: 100%;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 380px 380px 380px;
+    justify-content: space-evenly;
+}
+#courses .image-cover{
+    width: 370px;
+    height: 250px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+#courses .image-cover img{
+    filter: grayscale(95%);
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    transition: all 1s;
+}
+#courses .parent:hover img{
+    transform: scale(1.05);
+    border-radius: 0px;
+    filter:none;
+}
+#courses h2:nth-child(1){
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: var(--text-color);
+    grid-column-start: 1;
+    grid-column-end:4;
+    background: -webkit-linear-gradient(#33ccff 0%, #cc33ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#courses div:nth-child(2){
+    color: var(--text-color);
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    width: 60%;
+    text-align: left;
+    font-size: 20px;
+    line-height: 1cm;
+    grid-column-start: 1;
+    grid-column-end:4;
+}
+#courses .parent h2{
+    color:var(--text-color);
+    transition: all 0.5s;
+}
+#courses .parent:hover h2{
+    color: rgba(146, 70, 173, 0.853);
+}
+#courses div{
+    color: rgb(162, 162, 162);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0.8cm;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+#courses .parent:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+#courses h2{
+    margin-bottom: 20px;
+}
+
+
+/* FAQ */
+#faqs{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+}
+#faqs h1{
+    color: #cc33ff;
+    align-self: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+#faqs .faq{
+    color: var(--text-color);
+    max-width: 700px;
+    margin-top:20px;
+    cursor: pointer;
+}
+#faqs .faq .question{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 40px;
+    padding: 15px;
+    font-size: 19px;
+    background: linear-gradient(to left, #33ccff 0%, #cc00ff 100%);
+    border:3px solid white;
+} 
+#faqs .faq .question span{
+    color: var(--text-color);
+    font-size: 15px;
+    margin-right: 10px;
+    align-self: center;
+    transition: all 0.7s ease;
+}
+#faqs .faq .answer{
+    max-height: 0;
+    overflow: hidden;
+    font-size: 17px;
+    letter-spacing: 0.02cm;
+    line-height: 0.9cm;
+    transition: max-height 1s ease;
+}
+#faqs .faq .answer p{
+    padding: 15px 0px 10px 20px;
+}
+#faqs .faq.active .answer{
+    max-height: 300px;
+    animation: fade 0.8s ease-in-out;
+}
+#faqs .faq.active span{
+    transform: rotate(180deg);
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+/* CONTACT */
+#contact{
+    margin-top: 40px;
+    background-color: var(--other-color);
+    color: white;
+    padding: 30px 50px 20px 50px ;
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto 10px;
+}   
+
+#contact div:nth-child(3) i{
+    font-size: 40px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border:2px solid white;
+    transition: all 0.3s;
+}
+#contact div:nth-child(3) i:hover{
+    background-color: var(--main-color);
+    color: white;
+}
+#contact div:nth-child(1){
+    font-size: 25px;
+    display: inline-flex;
+}
+#contact div:nth-child(1) img{
+    position: relative;
+    height: 50px;
+    width: 50px;
+}
+#contact div:nth-child(2){
+    line-height: 0.8cm;
+}
+#contact div:nth-child(4){
+    color: grey;
+    font-size: 15px;
+    margin-left: 10px;
+}
+#contact div:nth-child(5){
+    color: grey;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width : 1500px){
+    .menu-bar a{
+        font-size: 18px;
+        margin-right: 10px;
+    }
+    main #about{
+        padding:40px;
+    }
+    #about p:nth-child(1){
+        font-size: 55px;    
+        line-height: 2cm;
+    }
+    #about img{
+        position: absolute;
+        width: 550px;
+        height: 550px;
+        left: 600px;
+        top: 0;
+        transform: translateY(-100px);
+        filter: drop-shadow(0px 0px 5px #fff);
+    }
+    #mission div p{
+        font-size: 17px;
+        line-height: 1.1cm;
+        letter-spacing: 0.11ch;
+    }
+    #benefits div{
+        margin: 10px;
+        height: 430px;
+    }
+}
+
